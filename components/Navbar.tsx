@@ -24,11 +24,20 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between gap-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 shrink-0">
-            <Image src="/img/logo.png" width={50} height={50} alt="Logo" className=""/>
+          <Link href="/" className="group flex items-center gap-2.5 shrink-0 rounded-xl p-1 focus:outline-none focus:ring-2 focus:ring-blue-500/50">
+            <div className="relative flex items-center justify-center transition-transform duration-300 ease-out group-hover:scale-105 group-hover:-translate-y-0.5">
+              <Image 
+                src="/img/logo.png" 
+                width={46} 
+                height={46} 
+                alt="TaxVATHub Logo" 
+                className="drop-shadow-md transition-all duration-300"
+                priority
+              />
+            </div>
               
-            <span className="hidden sm:block text-lg font-bold text-gray-900">
-              Tax<span className="text-blue-600">VAT</span>Hub
+            <span className="hidden sm:block text-2xl font-black tracking-tight text-slate-900 transition-colors">
+              Tax<span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">VAT</span>Hub
             </span>
           </Link>
 
