@@ -1,6 +1,9 @@
 {
   "nav": {
     "home": "হোম",
+    "calculators": "ক্যালকুলেটর",
+    "forms": "ফর্মসমূহ",
+    "dashboard": "ড্যাশবোর্ড",
     "categories": "বিভাগসমূহ",
     "search": "অনুসন্ধান",
     "admin": "অ্যাডমিন ড্যাশবোর্ড",
@@ -56,6 +59,13 @@
     "hasAccount": "ইতিমধ্যে অ্যাকাউন্ট আছে?",
     "signUpHere": "এখানে নিবন্ধন করুন",
     "signInHere": "এখানে সাইন ইন করুন"
+  },
+  "dashboard": {
+    "title": "বিজনেস ড্যাশবোর্ড",
+    "overview": "সংক্ষিপ্ত বিবরণ",
+    "transactions": "লেনদেন",
+    "reports": "রিপোর্ট",
+    "settings": "সেটিংস"
   },
   "admin": {
     "dashboard": "ড্যাশবোর্ড",

@@ -55,6 +55,30 @@ export default function Navbar() {
               {t("nav.home")}
             </Link>
             <Link
+              href="/calculators"
+              className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+            >
+              {t("nav.calculators")}
+            </Link>
+            <Link
+              href="/forms"
+              className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+            >
+              {t("nav.forms")}
+            </Link>
+            <Link
+              href="/dashboard"
+              className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+            >
+              {t("nav.dashboard")}
+            </Link>
+            <Link
+              href="/resources"
+              className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+            >
+              {t("nav.resources")}
+            </Link>
+            <Link
               href="/categories"
               className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
             >
@@ -159,6 +183,34 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
             >
               {t("nav.home")}
+            </Link>
+            <Link
+              href="/calculators"
+              className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 rounded-lg"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {t("nav.calculators")}
+            </Link>
+            <Link
+              href="/forms"
+              className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 rounded-lg"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {t("nav.forms")}
+            </Link>
+            <Link
+              href="/dashboard"
+              className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 rounded-lg"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {t("nav.dashboard")}
+            </Link>
+            <Link
+              href="/resources"
+              className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 rounded-lg"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {t("nav.resources")}
             </Link>
             <Link
               href="/categories"

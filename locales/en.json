@@ -1,6 +1,9 @@
 {
   "nav": {
     "home": "Home",
+    "calculators": "Calculators",
+    "forms": "Forms",
+    "dashboard": "Dashboard",
     "categories": "Categories",
     "search": "Search",
     "admin": "Admin Dashboard",
@@ -56,6 +59,13 @@
     "hasAccount": "Already have an account?",
     "signUpHere": "Sign up here",
     "signInHere": "Sign in here"
+  },
+  "dashboard": {
+    "title": "Business Dashboard",
+    "overview": "Overview",
+    "transactions": "Transactions",
+    "reports": "Reports",
+    "settings": "Settings"
   },
   "admin": {
     "dashboard": "Dashboard",
