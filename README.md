@@ -1,8 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VAT & Tax Hub
 
-## Getting Started
+VAT & Tax Hub is a comprehensive interactive platform designed to simplify tax and VAT for small businesses and individuals in Bangladesh.
 
-First, run the development server:
+## 🌟 Key Features
+
+- **Smart Calculators**: Advanced VAT and tax calculators tailored for the Bangladesh context.
+- **Guided Workflows**: Step-by-step form and return helpers to make compliance easy.
+- **Business Dashboard**: A dedicated dashboard for small businesses to track and manage their tax-related activities.
+- **Bilingual Support**: Fully functional in both English and Bangla.
+- **App-like UX**: Fast performance designed for ease of use.
+- **Resource Integration**: Contextual links and resources associated with [TaxVATPoint.com](https://taxvatpoint.com).
+
+## 🛠 Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) & [Framer Motion](https://www.framer.com/motion/)
+- **Database**: PostgreSQL with [Prisma ORM](https://www.prisma.io/)
+- **Authentication**: JWT & bcryptjs
+- **PDF Generation**: jsPDF & jsPDF-AutoTable
+- **Deployment**: [Vercel](https://vercel.com/)
+
+## 🚀 Getting Started
+
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+Set up your environment variables by creating a `.env` file based on your configuration needs, especially for the PostgreSQL database connection and JWT secrets.
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -16,21 +50,31 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Database Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Generate the Prisma client and push the schema to your database:
 
-## Learn More
+```bash
+npx prisma generate
+npx prisma db push
+```
 
-To learn more about Next.js, take a look at the following resources:
+To seed the database with initial data:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+bpm run prisma:seed
+# Actually defined in package.json as: bun run prisma/seed.ts
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🌐 Features & Pages
 
-## Deploy on Vercel
+- **Calculators**: Interactive tools for calculating VAT and Tax.
+- **Forms & Returns**: Helpers to guide users through necessary documentation.
+- **Dashboard**: A protected, personalized area for managing business tax activities.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🤝 Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions, issues, and feature requests are welcome!
+
+---
+Developed for helping simplified tax and VAT tracking in Bangladesh.
