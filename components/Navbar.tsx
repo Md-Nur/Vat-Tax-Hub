@@ -11,6 +11,7 @@ import {
   XMarkIcon,
   UserCircleIcon,
 } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 export default function Navbar() {
   const { t } = useTranslation();
@@ -24,9 +25,8 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between gap-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-blue-700 text-white font-bold text-sm">
-              TV
-            </div>
+            <Image src="/img/logo.png" width={50} height={50} alt="Logo" className=""/>
+              
             <span className="hidden sm:block text-lg font-bold text-gray-900">
               Tax<span className="text-blue-600">VAT</span>Hub
             </span>
