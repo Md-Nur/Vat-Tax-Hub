@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "home": "Home",
+    "categories": "Categories",
+    "search": "Search",
+    "admin": "Admin Dashboard",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "myAccount": "My Account"
+  },
+  "hero": {
+    "title": "Free Tax & VAT Resources for Bangladesh",
+    "subtitle": "Access comprehensive tax forms, VAT documents, income tax acts, SROs, and more — all in one place.",
+    "searchPlaceholder": "Search documents, forms, acts...",
+    "searchButton": "Search"
+  },
+  "home": {
+    "featuredCategories": "Featured Categories",
+    "browseAll": "Browse All Categories",
+    "quickLinks": "Quick Links",
+    "recentDocuments": "Recent Documents",
+    "viewAll": "View All",
+    "totalDocuments": "Total Documents",
+    "totalCategories": "Total Categories",
+    "totalViews": "Total Views"
+  },
+  "category": {
+    "documents": "Documents",
+    "noDocuments": "No documents found in this category.",
+    "backToCategories": "Back to Categories"
+  },
+  "document": {
+    "preview": "Preview",
+    "download": "Download",
+    "views": "views",
+    "uploadedOn": "Uploaded on",
+    "fileType": "File Type",
+    "language": "Language"
+  },
+  "search": {
+    "title": "Search Results",
+    "resultsFor": "Results for",
+    "noResults": "No documents found matching your search.",
+    "placeholder": "Search documents..."
+  },
+  "auth": {
+    "loginTitle": "Sign in to your account",
+    "registerTitle": "Create your account",
+    "email": "Email Address",
+    "password": "Password",
+    "name": "Full Name",
+    "loginButton": "Sign In",
+    "registerButton": "Create Account",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "signUpHere": "Sign up here",
+    "signInHere": "Sign in here"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "documents": "Documents",
+    "categories": "Categories",
+    "users": "Users",
+    "addDocument": "Add Document",
+    "addCategory": "Add Category",
+    "editDocument": "Edit Document",
+    "editCategory": "Edit Category",
+    "deleteConfirm": "Are you sure you want to delete this item?",
+    "title": "Title",
+    "description": "Description",
+    "fileUrl": "File URL",
+    "fileType": "File Type",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "actions": "Actions",
+    "totalDocs": "Total Documents",
+    "totalCats": "Total Categories",
+    "totalUsers": "Total Users",
+    "totalViewsLabel": "Total Views",
+    "overview": "Overview"
+  },
+  "footer": {
+    "description": "Your comprehensive resource for Bangladesh tax and VAT documentation.",
+    "quickLinks": "Quick Links",
+    "resources": "Resources",
+    "contact": "Contact",
+    "copyright": "© 2024 TaxVATHub. All rights reserved.",
+    "vatForms": "VAT Forms",
+    "incomeTax": "Income Tax",
+    "sros": "SROs",
+    "generalOrders": "General Orders"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "english": "English",
+    "bengali": "বাংলা",
+    "pdf": "PDF",
+    "excel": "Excel",
+    "word": "Word"
+  }
+}

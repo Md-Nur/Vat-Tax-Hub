@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "home": "হোম",
+    "categories": "বিভাগসমূহ",
+    "search": "অনুসন্ধান",
+    "admin": "অ্যাডমিন ড্যাশবোর্ড",
+    "login": "লগইন",
+    "register": "নিবন্ধন",
+    "logout": "লগআউট",
+    "myAccount": "আমার অ্যাকাউন্ট"
+  },
+  "hero": {
+    "title": "বাংলাদেশের জন্য বিনামূল্যে কর ও ভ্যাট সম্পদ",
+    "subtitle": "ট্যাক্স ফর্ম, ভ্যাট নথিপত্র, আয়কর আইন, এসআরও এবং আরও অনেক কিছু — সব একই জায়গায়।",
+    "searchPlaceholder": "নথিপত্র, ফর্ম, আইন অনুসন্ধান করুন...",
+    "searchButton": "অনুসন্ধান"
+  },
+  "home": {
+    "featuredCategories": "বৈশিষ্ট্যযুক্ত বিভাগ",
+    "browseAll": "সমস্ত বিভাগ দেখুন",
+    "quickLinks": "দ্রুত লিঙ্ক",
+    "recentDocuments": "সাম্প্রতিক নথিপত্র",
+    "viewAll": "সব দেখুন",
+    "totalDocuments": "মোট নথিপত্র",
+    "totalCategories": "মোট বিভাগ",
+    "totalViews": "মোট ভিউ"
+  },
+  "category": {
+    "documents": "নথিপত্র",
+    "noDocuments": "এই বিভাগে কোনো নথিপত্র পাওয়া যায়নি।",
+    "backToCategories": "বিভাগে ফিরে যান"
+  },
+  "document": {
+    "preview": "প্রিভিউ",
+    "download": "ডাউনলোড",
+    "views": "ভিউ",
+    "uploadedOn": "আপলোডের তারিখ",
+    "fileType": "ফাইলের ধরন",
+    "language": "ভাষা"
+  },
+  "search": {
+    "title": "অনুসন্ধান ফলাফল",
+    "resultsFor": "ফলাফল",
+    "noResults": "আপনার অনুসন্ধানের সাথে মিলে এমন কোনো নথিপত্র পাওয়া যায়নি।",
+    "placeholder": "নথিপত্র অনুসন্ধান করুন..."
+  },
+  "auth": {
+    "loginTitle": "আপনার অ্যাকাউন্টে সাইন ইন করুন",
+    "registerTitle": "আপনার অ্যাকাউন্ট তৈরি করুন",
+    "email": "ইমেইল ঠিকানা",
+    "password": "পাসওয়ার্ড",
+    "name": "পুরো নাম",
+    "loginButton": "সাইন ইন",
+    "registerButton": "অ্যাকাউন্ট তৈরি করুন",
+    "noAccount": "অ্যাকাউন্ট নেই?",
+    "hasAccount": "ইতিমধ্যে অ্যাকাউন্ট আছে?",
+    "signUpHere": "এখানে নিবন্ধন করুন",
+    "signInHere": "এখানে সাইন ইন করুন"
+  },
+  "admin": {
+    "dashboard": "ড্যাশবোর্ড",
+    "documents": "নথিপত্র",
+    "categories": "বিভাগসমূহ",
+    "users": "ব্যবহারকারী",
+    "addDocument": "নথি যোগ করুন",
+    "addCategory": "বিভাগ যোগ করুন",
+    "editDocument": "নথি সম্পাদনা",
+    "editCategory": "বিভাগ সম্পাদনা",
+    "deleteConfirm": "আপনি কি নিশ্চিত যে আপনি এই আইটেমটি মুছতে চান?",
+    "title": "শিরোনাম",
+    "description": "বিবরণ",
+    "fileUrl": "ফাইল URL",
+    "fileType": "ফাইলের ধরন",
+    "save": "সংরক্ষণ",
+    "cancel": "বাতিল",
+    "delete": "মুছুন",
+    "edit": "সম্পাদনা",
+    "actions": "কার্যক্রম",
+    "totalDocs": "মোট নথিপত্র",
+    "totalCats": "মোট বিভাগ",
+    "totalUsers": "মোট ব্যবহারকারী",
+    "totalViewsLabel": "মোট ভিউ",
+    "overview": "সংক্ষিপ্ত বিবরণ"
+  },
+  "footer": {
+    "description": "বাংলাদেশের কর ও ভ্যাট ডকুমেন্টেশনের জন্য আপনার ব্যাপক সম্পদ।",
+    "quickLinks": "দ্রুত লিঙ্ক",
+    "resources": "সম্পদ",
+    "contact": "যোগাযোগ",
+    "copyright": "© ২০২৪ ট্যাক্সভ্যাটহাব। সর্বস্বত্ব সংরক্ষিত।",
+    "vatForms": "ভ্যাট ফর্ম",
+    "incomeTax": "আয়কর",
+    "sros": "এসআরও",
+    "generalOrders": "সাধারণ আদেশ"
+  },
+  "common": {
+    "loading": "লোড হচ্ছে...",
+    "error": "একটি ত্রুটি ঘটেছে",
+    "english": "English",
+    "bengali": "বাংলা",
+    "pdf": "পিডিএফ",
+    "excel": "এক্সেল",
+    "word": "ওয়ার্ড"
+  }
+}
