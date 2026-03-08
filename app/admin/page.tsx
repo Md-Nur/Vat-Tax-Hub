@@ -86,10 +86,9 @@ export default function AdminDashboard() {
       </div>
 
       <div className="mt-8 rounded-xl bg-white border border-gray-100 p-6 shadow-sm">
-        <h2 className="text-lg font-semibold text-gray-900 mb-4">Welcome to Admin Dashboard</h2>
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">{t("admin.welcome")}</h2>
         <p className="text-gray-500 text-sm leading-relaxed">
-          Manage your documents, categories, and users from here. Use the sidebar navigation to
-          access different sections.
+          {t("admin.welcomeDesc")}
         </p>
         <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
           <a
@@ -97,16 +96,16 @@ export default function AdminDashboard() {
             className="rounded-lg border border-gray-200 p-4 hover:border-blue-200 hover:bg-blue-50 transition-all"
           >
             <DocumentTextIcon className="h-6 w-6 text-blue-600 mb-2" />
-            <h3 className="font-medium text-gray-900">Manage Documents</h3>
-            <p className="text-sm text-gray-500 mt-1">Add, edit, or remove documents</p>
+            <h3 className="font-medium text-gray-900">{t("admin.manageDocuments")}</h3>
+            <p className="text-sm text-gray-500 mt-1">{t("admin.manageDocumentsDesc")}</p>
           </a>
           <a
             href="/admin/categories"
             className="rounded-lg border border-gray-200 p-4 hover:border-emerald-200 hover:bg-emerald-50 transition-all"
           >
             <FolderIcon className="h-6 w-6 text-emerald-600 mb-2" />
-            <h3 className="font-medium text-gray-900">Manage Categories</h3>
-            <p className="text-sm text-gray-500 mt-1">Organize document categories</p>
+            <h3 className="font-medium text-gray-900">{t("admin.manageCategories")}</h3>
+            <p className="text-sm text-gray-500 mt-1">{t("admin.manageCategoriesDesc")}</p>
           </a>
         </div>
       </div>

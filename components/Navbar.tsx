@@ -20,7 +20,7 @@ export default function Navbar() {
   const [userMenuOpen, setUserMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-blue-100 bg-white/95 backdrop-blur-md">
+    <nav className="sticky top-0 z-50 border-b border-slate-200/50 bg-white/80 backdrop-blur-xl shadow-sm supports-[backdrop-filter]:bg-white/60">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between gap-4">
           {/* Logo */}
@@ -31,7 +31,7 @@ export default function Navbar() {
                 width={46} 
                 height={46} 
                 alt="TaxVATHub Logo" 
-                className="drop-shadow-md transition-all duration-300"
+                className="drop-shadow-md transition-all duration-300 p-2"
                 priority
               />
             </div>
@@ -48,48 +48,30 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-1">
-            <Link
-              href="/"
-              className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
-            >
-              {t("nav.home")}
-            </Link>
-            <Link
-              href="/calculators"
-              className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
-            >
-              {t("nav.calculators")}
-            </Link>
-            <Link
-              href="/forms"
-              className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
-            >
-              {t("nav.forms")}
-            </Link>
-            <Link
-              href="/dashboard"
-              className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
-            >
-              {t("nav.dashboard")}
-            </Link>
-            <Link
-              href="/resources"
-              className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
-            >
-              {t("nav.resources")}
-            </Link>
-            <Link
-              href="/categories"
-              className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
-            >
-              {t("nav.categories")}
-            </Link>
+            {[
+              { href: "/", label: "nav.home" },
+              { href: "/calculators", label: "nav.calculators" },
+              { href: "/forms", label: "nav.forms" },
+              { href: "/dashboard", label: "nav.dashboard" },
+              { href: "/resources", label: "nav.resources" },
+              { href: "/categories", label: "nav.categories" },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="relative px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group"
+              >
+                {t(link.label)}
+                <span className="absolute inset-x-3 -bottom-1 h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full duration-300 ease-out" />
+              </Link>
+            ))}
             {user?.role === "ADMIN" && (
               <Link
                 href="/admin"
-                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                className="relative px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group"
               >
                 {t("nav.admin")}
+                <span className="absolute inset-x-3 -bottom-1 h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full duration-300 ease-out" />
               </Link>
             )}
           </div>
@@ -102,9 +84,9 @@ export default function Navbar() {
               <div className="relative">
                 <button
                   onClick={() => setUserMenuOpen(!userMenuOpen)}
-                  className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 transition-colors"
+                  className="flex items-center gap-2 rounded-full px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-100 border border-transparent hover:border-slate-200 transition-all"
                 >
-                  <UserCircleIcon className="h-6 w-6" />
+                  <UserCircleIcon className="h-6 w-6 text-slate-500" />
                   <span className="hidden sm:inline">{user.name}</span>
                 </button>
                 {userMenuOpen && (
@@ -141,16 +123,16 @@ export default function Navbar() {
                 )}
               </div>
             ) : (
-              <div className="hidden sm:flex items-center gap-2">
+              <div className="hidden sm:flex items-center gap-3">
                 <Link
                   href="/login"
-                  className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
+                  className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
                 >
                   {t("nav.login")}
                 </Link>
                 <Link
                   href="/register"
-                  className="px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+                  className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 rounded-full shadow-sm shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all duration-300"
                 >
                   {t("nav.register")}
                 </Link>

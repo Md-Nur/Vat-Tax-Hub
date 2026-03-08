@@ -10,7 +10,8 @@
     "login": "Login",
     "register": "Register",
     "logout": "Logout",
-    "myAccount": "My Account"
+    "myAccount": "My Account",
+    "resources": "Resources"
   },
   "hero": {
     "title": "Free Tax & VAT Resources for Bangladesh",
@@ -26,7 +27,15 @@
     "viewAll": "View All",
     "totalDocuments": "Total Documents",
     "totalCategories": "Total Categories",
-    "totalViews": "Total Views"
+    "totalViews": "Total Views",
+    "featuredCategoriesDesc": "Browse our comprehensive collection of tax and VAT resources",
+    "noDocumentsAvail": "No documents available yet.",
+    "vatFormsDesc": "75+ VAT related forms",
+    "incomeTaxActDesc": "Complete tax legislation",
+    "vatSdAct": "VAT & SD Act 2012",
+    "vatSdActDesc": "VAT & Supplementary Duty",
+    "srosDesc": "Statutory Regulatory Orders",
+    "explore": "Explore"
   },
   "category": {
     "documents": "Documents",
@@ -65,7 +74,25 @@
     "overview": "Overview",
     "transactions": "Transactions",
     "reports": "Reports",
-    "settings": "Settings"
+    "settings": "Settings",
+    "overviewDescription": "Welcome to your business VAT and tax summary. Here's a quick glance at your current financial metrics.",
+    "totalSales": "Total Sales (This Month)",
+    "outputVat": "Output VAT Collected",
+    "inputVat": "Input VAT Paid",
+    "fromLastMonth": "from last month",
+    "awaitingTransactions": "Awaiting transactions",
+    "noVendorPayments": "No recent vendor payments",
+    "noData": "No data available yet",
+    "noDataDescription": "Start recording your sales and purchases to see your visual analytics and charts appear here.",
+    "addTransaction": "Add Transaction",
+    "manageTransactions": "Manage your sales and purchases to auto-calculate VAT.",
+    "uploadCsv": "Upload CSV",
+    "newEntry": "New Entry",
+    "salesOutputs": "Sales (Outputs)",
+    "purchasesInputs": "Purchases (Inputs)",
+    "noTransactions": "No",
+    "getStartedTransactions": "Get started by creating a new entry or uploading a CSV file.",
+    "backToSite": "Back to site"
   },
   "admin": {
     "dashboard": "Dashboard",
@@ -90,7 +117,13 @@
     "totalCats": "Total Categories",
     "totalUsers": "Total Users",
     "totalViewsLabel": "Total Views",
-    "overview": "Overview"
+    "overview": "Overview",
+    "welcome": "Welcome to Admin Dashboard",
+    "welcomeDesc": "Manage your documents, categories, and users from here. Use the sidebar navigation to access different sections.",
+    "manageDocuments": "Manage Documents",
+    "manageDocumentsDesc": "Add, edit, or remove documents",
+    "manageCategories": "Manage Categories",
+    "manageCategoriesDesc": "Organize document categories"
   },
   "footer": {
     "description": "Your comprehensive resource for Bangladesh tax and VAT documentation.",
@@ -111,5 +144,18 @@
     "pdf": "PDF",
     "excel": "Excel",
     "word": "Word"
+  },
+  "samples": {
+    "sampleFormsTitle": "Pre-filled Sample Forms",
+    "sampleFormsDesc": "View and download completed example forms to guide your own filings.",
+    "size": "Size",
+    "mushak63Title": "Mushak 6.3 - Tax Invoice",
+    "mushak63Desc": "Sample standard VAT invoice filled with dummy data for a typical sales transaction.",
+    "mushak91Title": "Mushak 9.1 - VAT Return",
+    "mushak91Desc": "Sample completed monthly VAT return showing standard inputs and outputs.",
+    "treasuryChallanTitle": "Treasury Challan (TR-6)",
+    "treasuryChallanDesc": "Example of a properly filled Treasury Challan for VAT deposit.",
+    "preview": "Preview",
+    "download": "Download"
   }
 }

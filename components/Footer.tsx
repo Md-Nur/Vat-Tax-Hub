@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useTranslation } from "@/lib/i18n";
 
+import Image from "next/image";
+
 export default function Footer() {
   const { t } = useTranslation();
 
@@ -13,8 +15,14 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 text-white font-bold text-sm">
-                TV
+              <div className="relative flex items-center justify-center p-1 bg-white/10 rounded-xl backdrop-blur-sm">
+                <Image 
+                  src="/img/logo.png" 
+                  width={32} 
+                  height={32} 
+                  alt="TaxVATHub Logo" 
+                  className="drop-shadow-md"
+                />
               </div>
               <span className="text-lg font-bold text-white">
                 Tax<span className="text-blue-400">VAT</span>Hub

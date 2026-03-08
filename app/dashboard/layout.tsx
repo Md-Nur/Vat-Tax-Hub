@@ -44,10 +44,10 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   }
 
   const navItems = [
-    { href: "/dashboard", label: t("dashboard.overview") || "Overview", icon: HomeIcon },
-    { href: "/dashboard/transactions", label: t("dashboard.transactions") || "Transactions", icon: CircleStackIcon },
-    { href: "/dashboard/reports", label: t("dashboard.reports") || "Reports", icon: DocumentChartBarIcon },
-    { href: "/dashboard/settings", label: t("dashboard.settings") || "Settings", icon: Cog6ToothIcon },
+    { href: "/dashboard", label: t("dashboard.overview"), icon: HomeIcon },
+    { href: "/dashboard/transactions", label: t("dashboard.transactions"), icon: CircleStackIcon },
+    { href: "/dashboard/reports", label: t("dashboard.reports"), icon: DocumentChartBarIcon },
+    { href: "/dashboard/settings", label: t("dashboard.settings"), icon: Cog6ToothIcon },
   ];
 
   return (
@@ -64,14 +64,14 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         {/* Sidebar */}
         <aside className={`fixed inset-y-0 left-0 z-50 w-64 bg-white border-r border-slate-200 transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:block ${mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
           <div className="flex h-16 items-center justify-between px-6 lg:hidden border-b border-slate-100">
-            <span className="text-lg font-bold text-slate-900">Dashboard</span>
+            <span className="text-lg font-bold text-slate-900">{t("dashboard.title")}</span>
             <button onClick={() => setMobileMenuOpen(false)} className="text-slate-500 hover:text-slate-700">
               <XMarkIcon className="h-6 w-6" />
             </button>
           </div>
           
           <div className="p-6 border-b border-slate-100 hidden lg:block">
-            <h2 className="text-lg font-bold text-slate-900">{t("dashboard.title") || "Business Dashboard"}</h2>
+            <h2 className="text-lg font-bold text-slate-900">{t("dashboard.title")}</h2>
             <p className="text-xs text-slate-500 mt-1 truncate">{user.email}</p>
           </div>
           
@@ -83,10 +83,10 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-all duration-200 ${
+                  className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-all duration-300 ${
                     isActive
-                      ? "bg-blue-600 shadow-md shadow-blue-500/20 text-white"
-                      : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+                      ? "bg-gradient-to-r from-blue-600 to-indigo-600 shadow-md shadow-indigo-500/20 text-white translate-x-1"
+                      : "text-slate-600 hover:bg-slate-50 hover:text-blue-600 hover:translate-x-1"
                   }`}
                 >
                   <item.icon className={`h-5 w-5 ${isActive ? 'text-blue-100' : 'text-slate-400'}`} />
@@ -102,7 +102,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               className="flex items-center gap-2 text-sm text-slate-500 hover:text-slate-800 transition-colors"
             >
               <ArrowLeftIcon className="h-4 w-4" />
-              Back to site
+              {t("dashboard.backToSite")}
             </Link>
           </div>
         </aside>
@@ -116,7 +116,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             >
               <Bars3BottomLeftIcon className="h-6 w-6" />
             </button>
-            <span className="ml-3 text-lg font-medium text-slate-900">{t("dashboard.title") || "Business Dashboard"}</span>
+            <span className="ml-3 text-lg font-medium text-slate-900">{t("dashboard.title")}</span>
           </div>
           
           <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">

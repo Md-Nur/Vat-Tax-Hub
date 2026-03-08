@@ -45,46 +45,48 @@ export default function DocumentCard({
   const displayDesc = locale === "bn" && descriptionBn ? descriptionBn : description;
 
   return (
-    <div className="group relative rounded-xl border border-gray-100 bg-white p-5 shadow-sm hover:shadow-md hover:border-blue-100 transition-all duration-200">
-      <div className="flex items-start gap-4">
+    <div className="group relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-xl hover:shadow-blue-900/5 hover:border-blue-200 transition-all duration-300">
+      <div className="flex items-start gap-5">
         {/* File type icon */}
-        <div className={`shrink-0 rounded-lg p-3 ${config.bg}`}>
-          <Icon className={`h-6 w-6 ${config.color}`} />
+        <div className={`shrink-0 flex items-center justify-center rounded-xl p-3.5 ${config.bg} shadow-sm group-hover:scale-105 transition-transform duration-300`}>
+          <Icon className={`h-7 w-7 ${config.color}`} />
         </div>
 
         <div className="flex-1 min-w-0">
-          <h3 className="font-semibold text-gray-900 text-sm leading-snug line-clamp-2 group-hover:text-blue-600 transition-colors">
+          <h3 className="font-bold text-slate-900 text-base leading-snug line-clamp-2 group-hover:text-blue-600 transition-colors">
             {displayTitle}
           </h3>
           {displayDesc && (
-            <p className="mt-1.5 text-xs text-gray-500 line-clamp-2 leading-relaxed">
+            <p className="mt-2 text-sm text-slate-500 line-clamp-2 leading-relaxed">
               {displayDesc}
             </p>
           )}
 
-          <div className="mt-3 flex flex-wrap items-center gap-3 text-xs text-gray-400">
-            <span className={`inline-flex items-center rounded-full px-2 py-0.5 font-medium uppercase ${config.bg} ${config.color}`}>
+          <div className="mt-4 flex flex-wrap items-center gap-4 text-xs font-medium text-slate-500">
+            <span className={`inline-flex items-center justify-center rounded-full px-2.5 py-1 text-[10px] sm:text-xs font-bold uppercase tracking-wider ${config.bg} ${config.color}`}>
               {fileType}
             </span>
-            <span className="flex items-center gap-1">
-              <EyeIcon className="h-3.5 w-3.5" />
+            <span className="flex items-center gap-1.5 bg-slate-50 px-2 py-1 rounded-md">
+              <EyeIcon className="h-4 w-4 text-slate-400" />
               {views} {t("document.views")}
             </span>
-            <span>
-              {new Date(createdAt).toLocaleDateString(locale === "bn" ? "bn-BD" : "en-US")}
+            <span className="bg-slate-50 px-2 py-1 rounded-md">
+              {new Date(createdAt).toLocaleDateString(locale === "bn" ? "bn-BD" : "en-US", { year: 'numeric', month: 'short', day: 'numeric'})}
             </span>
           </div>
         </div>
 
         {/* Download button */}
-        <a
-          href={fileUrl}
-          download
-          className="shrink-0 rounded-lg p-2.5 text-gray-400 hover:text-blue-600 hover:bg-blue-50 transition-all"
-          title={t("document.download")}
-        >
-          <ArrowDownTrayIcon className="h-5 w-5" />
-        </a>
+        <div className="shrink-0 flex flex-col items-center">
+          <a
+            href={fileUrl}
+            download
+            className="flex items-center justify-center h-10 w-10 rounded-full bg-slate-50 text-slate-400 hover:text-white hover:bg-blue-600 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+            title={t("document.download")}
+          >
+            <ArrowDownTrayIcon className="h-5 w-5" />
+          </a>
+        </div>
       </div>
     </div>
   );
