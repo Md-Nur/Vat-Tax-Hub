@@ -34,7 +34,7 @@ export default function CategoriesPage() {
         <div className="mb-10">
           <h1 className="text-3xl font-bold text-gray-900">{t("nav.categories")}</h1>
           <p className="mt-2 text-gray-500">
-            Browse all document categories
+            {t("category.browseAll")}
           </p>
         </div>
 

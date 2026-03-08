@@ -77,7 +77,7 @@ function SearchContent() {
         ) : (
           <div className="text-center py-16">
             <MagnifyingGlassIcon className="h-16 w-16 mx-auto mb-4 text-gray-300" />
-            <p className="text-gray-500 text-lg">Enter a search term to find documents</p>
+            <p className="text-gray-500 text-lg">{t("search.enterTerm")}</p>
           </div>
         )}
       </div>

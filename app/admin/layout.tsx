@@ -77,7 +77,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-700"
             >
               <ArrowLeftIcon className="h-4 w-4" />
-              Back to site
+              {t("admin.backToSite")}
             </Link>
           </div>
         </aside>

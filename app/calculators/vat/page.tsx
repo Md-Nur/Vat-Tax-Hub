@@ -41,9 +41,9 @@ export default function VatCalculatorPage() {
             <div className="p-2 bg-blue-100 rounded-lg">
               <CalculatorIcon className="h-6 w-6 text-blue-600" />
             </div>
-            <h1 className="text-3xl font-bold text-slate-900">VAT Calculator</h1>
+            <h1 className="text-3xl font-bold text-slate-900">{t("vat.title")}</h1>
           </div>
-          <p className="text-slate-600">Calculate VAT forwards or backwards instantly.</p>
+          <p className="text-slate-600">{t("vat.subtitle")}</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -52,7 +52,7 @@ export default function VatCalculatorPage() {
             <div className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Amount (BDT)
+                  {t("vat.amount")}
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -70,7 +70,7 @@ export default function VatCalculatorPage() {
 
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-3">
-                  VAT Rate
+                  {t("vat.rate")}
                 </label>
                 <div className="grid grid-cols-4 gap-3">
                   {[5, 7.5, 10, 15].map((r) => (
@@ -91,7 +91,7 @@ export default function VatCalculatorPage() {
 
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-3">
-                  Calculation Type
+                  {t("vat.type")}
                 </label>
                 <div className="flex bg-slate-100 p-1 rounded-xl">
                   <button
@@ -102,7 +102,7 @@ export default function VatCalculatorPage() {
                         : 'text-slate-600 hover:text-slate-900'
                     }`}
                   >
-                    Add VAT (Exclusive)
+                    {t("vat.addVat")}
                   </button>
                   <button
                     onClick={() => setCalculationType("inclusive")}
@@ -112,7 +112,7 @@ export default function VatCalculatorPage() {
                         : 'text-slate-600 hover:text-slate-900'
                     }`}
                   >
-                    Remove VAT (Inclusive)
+                    {t("vat.removeVat")}
                   </button>
                 </div>
               </div>
@@ -121,21 +121,21 @@ export default function VatCalculatorPage() {
 
           {/* Results Section */}
           <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 shadow-xl text-white flex flex-col justify-center">
-            <h3 className="text-slate-400 font-medium tracking-wide text-sm uppercase mb-8">Calculation Result</h3>
+            <h3 className="text-slate-400 font-medium tracking-wide text-sm uppercase mb-8">{t("vat.result")}</h3>
             
             <div className="space-y-6">
               <div className="flex justify-between items-end border-b border-slate-700/50 pb-4">
-                <div className="text-slate-300">Net Amount</div>
+                <div className="text-slate-300">{t("vat.netAmount")}</div>
                 <div className="text-xl font-medium">{formatCurrency(netAmount)}</div>
               </div>
               
               <div className="flex justify-between items-end border-b border-slate-700/50 pb-4">
-                <div className="text-slate-300">VAT Amount ({rate}%)</div>
+                <div className="text-slate-300">{t("vat.vatAmount")} ({rate}%)</div>
                 <div className="text-xl font-medium text-blue-400">+{formatCurrency(vatAmount)}</div>
               </div>
               
               <div className="flex justify-between items-end pt-2">
-                <div className="text-slate-200 font-medium">Gross Amount</div>
+                <div className="text-slate-200 font-medium">{t("vat.grossAmount")}</div>
                 <div className="text-3xl font-bold tracking-tight text-white">{formatCurrency(grossAmount)}</div>
               </div>
             </div>

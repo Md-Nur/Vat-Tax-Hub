@@ -114,7 +114,7 @@ export default function CategoryPage() {
           </>
         ) : (
           <div className="text-center py-16">
-            <p className="text-gray-500 text-lg">Category not found</p>
+            <p className="text-gray-500 text-lg">{t("category.notFound")}</p>
           </div>
         )}
       </div>

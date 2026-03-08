@@ -9,8 +9,8 @@ export default function CalculatorsPage() {
 
   const calculators = [
     {
-      title: "VAT Calculator",
-      description: "Calculate VAT (forward & backward) instantly. Includes standard and reduced rates.",
+      title: t("calculators.vatTitle"),
+      description: t("calculators.vatDesc"),
       icon: CalculatorIcon,
       href: "/calculators/vat",
       color: "from-blue-500 to-indigo-600",
@@ -18,8 +18,8 @@ export default function CalculatorsPage() {
       iconColor: "text-blue-600"
     },
     {
-      title: "Income Tax Estimator",
-      description: "Quickly estimate your individual or basic business income tax liability.",
+      title: t("calculators.incomeTaxTitle"),
+      description: t("calculators.incomeTaxDesc"),
       icon: BanknotesIcon,
       href: "/calculators/income-tax",
       color: "from-emerald-500 to-teal-600",
@@ -27,8 +27,8 @@ export default function CalculatorsPage() {
       iconColor: "text-emerald-600"
     },
     {
-      title: "Import Duty Estimator",
-      description: "Estimate import duties and landing costs based on product types.",
+      title: t("calculators.importDutyTitle"),
+      description: t("calculators.importDutyDesc"),
       icon: GlobeAsiaAustraliaIcon,
       href: "/calculators/import-duty",
       color: "from-amber-500 to-orange-600",
@@ -42,10 +42,10 @@ export default function CalculatorsPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h1 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900">
-            Smart Tax <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">&</span> VAT Calculators
+            {t("calculators.title")} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">{t("calculators.vatCalculators")}</span>
           </h1>
           <p className="text-lg text-slate-600">
-            Free, fast, and accurate calculators designed specifically for Bangladesh tax compliance.
+            {t("calculators.subtitle")}
           </p>
         </div>
 
@@ -64,7 +64,7 @@ export default function CalculatorsPage() {
                 {calc.description}
               </p>
               <div className="flex items-center text-sm font-semibold text-blue-600 group-hover:text-indigo-600">
-                Start calculating 
+                {t("calculators.startCalculating")} 
                 <span className="ml-2 transform text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
               </div>
             </Link>

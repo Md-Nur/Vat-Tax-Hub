@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { CheckCircleIcon, ClockIcon } from "@heroicons/react/24/outline";
 import { CheckCircleIcon as SolidCheckCircleIcon } from "@heroicons/react/24/solid";
+import { useTranslation } from "@/lib/i18n";
 
 interface Task {
   id: string;
@@ -13,32 +14,34 @@ interface Task {
 }
 
 export default function ComplianceChecklistPage() {
+  const { t } = useTranslation();
+
   const [tasks, setTasks] = useState<Task[]>([
     {
       id: "vat-return",
-      title: "Submit Mushak 9.1 (Monthly VAT Return)",
-      deadline: "15th of next month",
+      title: t("checklist.vatReturn"),
+      deadline: t("checklist.vatReturnDeadline"),
       completed: false,
       type: "monthly"
     },
     {
       id: "vds-cert",
-      title: "Issue VDS Certificate (Mushak 6.6)",
-      deadline: "Within 3 days of deduction",
+      title: t("checklist.vdsCert"),
+      deadline: t("checklist.vdsCertDeadline"),
       completed: false,
       type: "monthly"
     },
     {
       id: "tax-return",
-      title: "File Annual Income Tax Return",
-      deadline: "30th November (General)",
+      title: t("checklist.taxReturn"),
+      deadline: t("checklist.taxReturnDeadline"),
       completed: false,
       type: "annual"
     },
     {
       id: "audit-report",
-      title: "Submit Audited Financials",
-      deadline: "With Income Tax Return",
+      title: t("checklist.auditReport"),
+      deadline: t("checklist.auditReportDeadline"),
       completed: false,
       type: "annual"
     }
@@ -82,7 +85,7 @@ export default function ComplianceChecklistPage() {
               </p>
               <p className="text-sm flex items-center gap-1 mt-1 text-slate-500">
                 <ClockIcon className="h-4 w-4" />
-                Due: {task.deadline}
+                {t("checklist.due")} {task.deadline}
               </p>
             </div>
           </li>
@@ -95,19 +98,19 @@ export default function ComplianceChecklistPage() {
     <div className="min-h-screen bg-slate-50 py-10">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8 text-center max-w-2xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">Compliance Checklist</h1>
-          <p className="text-slate-600 text-lg">Never miss a deadline. Keep track of your monthly and annual tax obligations.</p>
+          <h1 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">{t("checklist.title")}</h1>
+          <p className="text-slate-600 text-lg">{t("checklist.subtitle")}</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           <TaskList 
-            title="Monthly Obligations" 
+            title={t("checklist.monthly")} 
             items={monthlyTasks} 
             icon={ClockIcon} 
             color="text-blue-600" 
           />
           <TaskList 
-            title="Annual Obligations" 
+            title={t("checklist.annual")} 
             items={annualTasks} 
             icon={CheckCircleIcon} 
             color="text-emerald-600" 

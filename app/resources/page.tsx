@@ -8,47 +8,47 @@ export default function ResourcesPage() {
 
   const resources = [
     {
-      category: "VAT Registration (BIN)",
+      category: t("resources.vatRegistration"),
       icon: IdentificationIcon,
       color: "text-blue-600",
       bgLight: "bg-blue-50",
       links: [
-        { title: "How to apply for BIN online", url: "/category/bin-registration" },
-        { title: "Documents required for Turnover Tax", url: "/category/turnover-tax" },
-        { title: "Updating Business Address in VAT Online", url: "/category/vat-online-portal" },
+        { title: t("resources.binOnline"), url: "/category/bin-registration" },
+        { title: t("resources.turnoverTax"), url: "/category/turnover-tax" },
+        { title: t("resources.updateAddress"), url: "/category/vat-online-portal" },
       ]
     },
     {
-      category: "Monthly VAT Returns",
+      category: t("resources.monthlyReturns"),
       icon: PresentationChartLineIcon,
       color: "text-purple-600",
       bgLight: "bg-purple-50",
       links: [
-        { title: "Common Mistakes in Mushak 9.1", url: "/category/mushak-9-1" },
-        { title: "Adjusting Input VAT Claims", url: "/category/input-vat-adjustment" },
-        { title: "Submitting Nil Returns", url: "/document/nil-return-guide" },
+        { title: t("resources.commonMistakes"), url: "/category/mushak-9-1" },
+        { title: t("resources.inputVat"), url: "/category/input-vat-adjustment" },
+        { title: t("resources.nilReturns"), url: "/document/nil-return-guide" },
       ]
     },
     {
-      category: "Customs & Import",
+      category: t("resources.customsImport"),
       icon: CurrencyDollarIcon,
       color: "text-amber-600",
       bgLight: "bg-amber-50",
       links: [
-        { title: "HS Code Directory", url: "/category/hs-codes" },
-        { title: "Special Import Tax Exemptions", url: "/category/customs-sro" },
-        { title: "Advance Tax Refund Process", url: "/category/at-refund" },
+        { title: t("resources.hsCodes"), url: "/category/hs-codes" },
+        { title: t("resources.specialImport"), url: "/category/customs-sro" },
+        { title: t("resources.advanceTax"), url: "/category/at-refund" },
       ]
     },
     {
-      category: "General Business Tax",
+      category: t("resources.generalTax"),
       icon: BookOpenIcon,
       color: "text-emerald-600",
       bgLight: "bg-emerald-50",
       links: [
-        { title: "TDS / VDS Rate Chart 2024", url: "/category/tds-rate-chart" },
-        { title: "Directors' Income Tax Return", url: "/category/individual-tax" },
-        { title: "Understanding the Corporate Tax Slabs", url: "/category/corporate-tax" },
+        { title: t("resources.tdsChart"), url: "/category/tds-rate-chart" },
+        { title: t("resources.directorsReturn"), url: "/category/individual-tax" },
+        { title: t("resources.corporateTax"), url: "/category/corporate-tax" },
       ]
     }
   ];
@@ -58,10 +58,10 @@ export default function ResourcesPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h1 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900">
-            Learn from <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">TaxVATPoint</span>
+            {t("resources.title")} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">TaxVATPoint</span>
           </h1>
           <p className="text-lg text-slate-600">
-            A curated directory of our best articles, guides, and circulars directly from our main knowledge base.
+            {t("resources.subtitle")}
           </p>
         </div>
 
@@ -103,7 +103,7 @@ export default function ResourcesPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-full font-bold shadow-lg transition-all hover:scale-105"
           >
-            Visit Full Knowledge Base
+            {t("resources.visit")}
             <ArrowTopRightOnSquareIcon className="h-5 w-5" />
           </a>
         </div>

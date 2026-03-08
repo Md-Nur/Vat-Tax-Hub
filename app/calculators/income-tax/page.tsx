@@ -3,8 +3,10 @@
 import { useState } from "react";
 import ContextualLinks from "@/components/ContextualLinks";
 import { BanknotesIcon } from "@heroicons/react/24/outline";
+import { useTranslation } from "@/lib/i18n";
 
 export default function IncomeTaxCalculatorPage() {
+  const { t } = useTranslation();
   const [annualIncome, setAnnualIncome] = useState<string>("800000");
   const [taxpayerType, setTaxpayerType] = useState<"general" | "female" | "senior">("general");
 
@@ -52,9 +54,9 @@ export default function IncomeTaxCalculatorPage() {
             <div className="p-2 bg-emerald-100 rounded-lg">
               <BanknotesIcon className="h-6 w-6 text-emerald-600" />
             </div>
-            <h1 className="text-3xl font-bold text-slate-900">Income Tax Estimator</h1>
+            <h1 className="text-3xl font-bold text-slate-900">{t("incomeTax.title")}</h1>
           </div>
-          <p className="text-slate-600">Quickly estimate your basic individual tax liability based on NBR slabs.</p>
+          <p className="text-slate-600">{t("incomeTax.subtitle")}</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -63,7 +65,7 @@ export default function IncomeTaxCalculatorPage() {
             <div className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Annual Income (BDT)
+                  {t("incomeTax.annualIncome")}
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -80,7 +82,7 @@ export default function IncomeTaxCalculatorPage() {
 
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-3">
-                  Taxpayer Category
+                  {t("incomeTax.category")}
                 </label>
                 <div className="flex flex-col gap-3">
                   <label className="flex items-center bg-slate-50 p-3 rounded-xl border border-slate-200 cursor-pointer hover:bg-emerald-50 hover:border-emerald-200 transition-colors">
@@ -92,7 +94,7 @@ export default function IncomeTaxCalculatorPage() {
                       onChange={() => setTaxpayerType("general")}
                       className="h-4 w-4 text-emerald-600 focus:ring-emerald-500 border-gray-300"
                     />
-                    <span className="ml-3 text-sm font-medium text-slate-900">General Individual</span>
+                    <span className="ml-3 text-sm font-medium text-slate-900">{t("incomeTax.general")}</span>
                   </label>
                   <label className="flex items-center bg-slate-50 p-3 rounded-xl border border-slate-200 cursor-pointer hover:bg-emerald-50 hover:border-emerald-200 transition-colors">
                     <input 
@@ -103,7 +105,7 @@ export default function IncomeTaxCalculatorPage() {
                       onChange={() => setTaxpayerType("female")}
                       className="h-4 w-4 text-emerald-600 focus:ring-emerald-500 border-gray-300"
                     />
-                    <span className="ml-3 text-sm font-medium text-slate-900">Female or Senior Citizen (65+ years)</span>
+                    <span className="ml-3 text-sm font-medium text-slate-900">{t("incomeTax.femaleSenior")}</span>
                   </label>
                 </div>
               </div>
@@ -112,21 +114,21 @@ export default function IncomeTaxCalculatorPage() {
 
           {/* Results Section */}
           <div className="bg-gradient-to-br from-emerald-900 to-emerald-800 rounded-3xl p-8 shadow-xl text-white flex flex-col justify-center">
-            <h3 className="text-emerald-300 font-medium tracking-wide text-sm uppercase mb-8">Estimated Liability</h3>
+            <h3 className="text-emerald-300 font-medium tracking-wide text-sm uppercase mb-8">{t("incomeTax.liability")}</h3>
             
             <div className="space-y-6">
               <div className="flex justify-between items-end border-b border-emerald-700/50 pb-4">
-                <div className="text-emerald-200">Total Income</div>
+                <div className="text-emerald-200">{t("incomeTax.totalIncome")}</div>
                 <div className="text-xl font-medium">{formatCurrency(numIncome)}</div>
               </div>
               
               <div className="flex justify-between items-end border-b border-emerald-700/50 pb-4">
-                <div className="text-emerald-200">Tax Payable</div>
+                <div className="text-emerald-200">{t("incomeTax.taxPayable")}</div>
                 <div className="text-3xl font-bold tracking-tight text-white">{formatCurrency(totalTax)}</div>
               </div>
               
               <div className="flex justify-between items-end pt-2">
-                <div className="text-emerald-200 font-medium">Effective Tax Rate</div>
+                <div className="text-emerald-200 font-medium">{t("incomeTax.effectiveRate")}</div>
                 <div className="text-xl font-medium text-emerald-300">{effectiveTaxRate.toFixed(2)}%</div>
               </div>
             </div>

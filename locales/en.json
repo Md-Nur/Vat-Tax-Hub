@@ -40,7 +40,9 @@
   "category": {
     "documents": "Documents",
     "noDocuments": "No documents found in this category.",
-    "backToCategories": "Back to Categories"
+    "backToCategories": "Back to Categories",
+    "browseAll": "Browse all document categories",
+    "notFound": "Category not found"
   },
   "document": {
     "preview": "Preview",
@@ -51,10 +53,11 @@
     "language": "Language"
   },
   "search": {
-    "title": "Search Results",
+    "title": "Search Documents",
     "resultsFor": "Results for",
-    "noResults": "No documents found matching your search.",
-    "placeholder": "Search documents..."
+    "noResults": "No matching documents found. Try different keywords.",
+    "placeholder": "Search documents...",
+    "enterTerm": "Enter a search term to find documents"
   },
   "auth": {
     "loginTitle": "Sign in to your account",
@@ -123,7 +126,8 @@
     "manageDocuments": "Manage Documents",
     "manageDocumentsDesc": "Add, edit, or remove documents",
     "manageCategories": "Manage Categories",
-    "manageCategoriesDesc": "Organize document categories"
+    "manageCategoriesDesc": "Organize document categories",
+    "backToSite": "Back to site"
   },
   "footer": {
     "description": "Your comprehensive resource for Bangladesh tax and VAT documentation.",
@@ -157,5 +161,111 @@
     "treasuryChallanDesc": "Example of a properly filled Treasury Challan for VAT deposit.",
     "preview": "Preview",
     "download": "Download"
+  },
+  "resources": {
+    "title": "Learn from ",
+    "subtitle": "A curated directory of our best articles, guides, and circulars directly from our main knowledge base.",
+    "visit": "Visit Full Knowledge Base",
+    "vatRegistration": "VAT Registration (BIN)",
+    "monthlyReturns": "Monthly VAT Returns",
+    "customsImport": "Customs & Import",
+    "generalTax": "General Business Tax",
+    "binOnline": "How to apply for BIN online",
+    "turnoverTax": "Documents required for Turnover Tax",
+    "updateAddress": "Updating Business Address in VAT Online",
+    "commonMistakes": "Common Mistakes in Mushak 9.1",
+    "inputVat": "Adjusting Input VAT Claims",
+    "nilReturns": "Submitting Nil Returns",
+    "hsCodes": "HS Code Directory",
+    "specialImport": "Special Import Tax Exemptions",
+    "advanceTax": "Advance Tax Refund Process",
+    "tdsChart": "TDS / VDS Rate Chart 2024",
+    "directorsReturn": "Directors' Income Tax Return",
+    "corporateTax": "Understanding the Corporate Tax Slabs"
+  },
+  "calculators": {
+    "title": "Smart Tax",
+    "vatCalculators": "& VAT Calculators",
+    "subtitle": "Free, fast, and accurate calculators designed specifically for Bangladesh tax compliance.",
+    "startCalculating": "Start calculating",
+    "vatTitle": "VAT Calculator",
+    "vatDesc": "Calculate VAT (forward & backward) instantly. Includes standard and reduced rates.",
+    "incomeTaxTitle": "Income Tax Estimator",
+    "incomeTaxDesc": "Quickly estimate your individual or basic business income tax liability.",
+    "importDutyTitle": "Import Duty Estimator",
+    "importDutyDesc": "Estimate import duties and landing costs based on product types."
+  },
+  "incomeTax": {
+    "title": "Income Tax Estimator",
+    "subtitle": "Quickly estimate your basic individual tax liability based on NBR slabs.",
+    "annualIncome": "Annual Income (BDT)",
+    "category": "Taxpayer Category",
+    "general": "General Individual",
+    "femaleSenior": "Female or Senior Citizen (65+ years)",
+    "liability": "Estimated Liability",
+    "totalIncome": "Total Income",
+    "taxPayable": "Tax Payable",
+    "effectiveRate": "Effective Tax Rate"
+  },
+  "vat": {
+    "title": "VAT Calculator",
+    "subtitle": "Calculate VAT forwards or backwards instantly.",
+    "amount": "Amount (BDT)",
+    "rate": "VAT Rate",
+    "type": "Calculation Type",
+    "addVat": "Add VAT (Exclusive)",
+    "removeVat": "Remove VAT (Inclusive)",
+    "result": "Calculation Result",
+    "netAmount": "Net Amount",
+    "vatAmount": "VAT Amount",
+    "grossAmount": "Gross Amount"
+  },
+  "checklist": {
+    "title": "Compliance Checklist",
+    "subtitle": "Never miss a deadline. Keep track of your monthly and annual tax obligations.",
+    "monthly": "Monthly Obligations",
+    "annual": "Annual Obligations",
+    "due": "Due:",
+    "vatReturn": "Submit Mushak 9.1 (Monthly VAT Return)",
+    "vatReturnDeadline": "15th of next month",
+    "vdsCert": "Issue VDS Certificate (Mushak 6.6)",
+    "vdsCertDeadline": "Within 3 days of deduction",
+    "taxReturn": "File Annual Income Tax Return",
+    "taxReturnDeadline": "30th November (General)",
+    "auditReport": "Submit Audited Financials",
+    "auditReportDeadline": "With Income Tax Return"
+  },
+  "forms": {
+    "title": "Form",
+    "returnHelpers": "& Return Helpers",
+    "subtitle": "Simplify your tax return process. Use our wizards or download pre-filled PDF samples.",
+    "explore": "Explore tool",
+    "mushakWizardTitle": "Mushak Wizard",
+    "mushakWizardDesc": "Step-by-step guide to generating common NBR VAT forms.",
+    "samplesTitle": "Pre-filled Samples",
+    "samplesDesc": "View dummy samples of common tax forms. Edit and export to PDF.",
+    "checklistTitle": "Compliance Checklist",
+    "checklistDesc": "Stay organized with monthly and annual compliance task lists."
+  },
+  "wizard": {
+    "title": "Mushak 9.1 Return Wizard",
+    "subtitle": "A step-by-step guide to prepare your monthly VAT return.",
+    "basicInfo": "Basic Info",
+    "salesPurchases": "Sales & Purchases",
+    "reviewExport": "Review & Export",
+    "step1": "Step 1: Business Details",
+    "businessName": "Business Name",
+    "businessNamePlaceholder": "e.g. Acme Corp Ltd.",
+    "bin": "BIN (Business Identification Number)",
+    "binPlaceholder": "e.g. 123456789",
+    "taxPeriod": "Tax Period",
+    "step2": "Step 2: Sales & VAT Data",
+    "step2Hint": "Enter your total sales for the selected period. If you use our Dashboard, this can be synced automatically.",
+    "totalSales": "Total Sales (BDT)",
+    "totalOutputVat": "Total Output VAT Collected (BDT)",
+    "step3": "Step 3: Review & Generate",
+    "generatePdf": "Generate Mushak 9.1 PDF",
+    "back": "Back",
+    "continue": "Continue"
   }
 }

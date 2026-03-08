@@ -3,8 +3,10 @@
 import { useState } from "react";
 import ContextualLinks from "@/components/ContextualLinks";
 import { DocumentTextIcon, CheckIcon } from "@heroicons/react/24/outline";
+import { useTranslation } from "@/lib/i18n";
 
 export default function FormWizardPage() {
+  const { t } = useTranslation();
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     businessName: "",
@@ -21,8 +23,8 @@ export default function FormWizardPage() {
     <div className="min-h-screen bg-slate-50 py-10">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8 text-center">
-          <h1 className="text-3xl font-bold text-slate-900 mb-2">Mushak 9.1 Return Wizard</h1>
-          <p className="text-slate-600">A step-by-step guide to prepare your monthly VAT return.</p>
+          <h1 className="text-3xl font-bold text-slate-900 mb-2">{t("wizard.title")}</h1>
+          <p className="text-slate-600">{t("wizard.subtitle")}</p>
         </div>
 
         {/* Progress Bar */}
@@ -46,9 +48,9 @@ export default function FormWizardPage() {
             ))}
           </div>
           <div className="flex justify-between mt-2 text-xs font-medium text-slate-500">
-            <span>Basic Info</span>
-            <span>Sales & Purchases</span>
-            <span>Review & Export</span>
+            <span>{t("wizard.basicInfo")}</span>
+            <span>{t("wizard.salesPurchases")}</span>
+            <span>{t("wizard.reviewExport")}</span>
           </div>
         </div>
 
@@ -56,30 +58,30 @@ export default function FormWizardPage() {
         <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 min-h-[400px]">
           {step === 1 && (
             <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4">
-              <h2 className="text-xl font-semibold text-slate-900">Step 1: Business Details</h2>
+              <h2 className="text-xl font-semibold text-slate-900">{t("wizard.step1")}</h2>
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1">Business Name</label>
+                  <label className="block text-sm font-medium text-slate-700 mb-1">{t("wizard.businessName")}</label>
                   <input
                     type="text"
                     value={formData.businessName}
                     onChange={(e) => setFormData({...formData, businessName: e.target.value})}
                     className="block w-full px-4 py-3 bg-slate-50 border-slate-200 rounded-xl focus:ring-purple-500 focus:border-purple-500"
-                    placeholder="e.g. Acme Corp Ltd."
+                    placeholder={t("wizard.businessNamePlaceholder")}
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1">BIN (Business Identification Number)</label>
+                  <label className="block text-sm font-medium text-slate-700 mb-1">{t("wizard.bin")}</label>
                   <input
                     type="text"
                     value={formData.bin}
                     onChange={(e) => setFormData({...formData, bin: e.target.value})}
                     className="block w-full px-4 py-3 bg-slate-50 border-slate-200 rounded-xl focus:ring-purple-500 focus:border-purple-500"
-                    placeholder="e.g. 123456789"
+                    placeholder={t("wizard.binPlaceholder")}
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1">Tax Period</label>
+                  <label className="block text-sm font-medium text-slate-700 mb-1">{t("wizard.taxPeriod")}</label>
                   <input
                     type="month"
                     value={formData.period}
@@ -93,13 +95,13 @@ export default function FormWizardPage() {
 
           {step === 2 && (
             <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4">
-              <h2 className="text-xl font-semibold text-slate-900">Step 2: Sales & VAT Data</h2>
+              <h2 className="text-xl font-semibold text-slate-900">{t("wizard.step2")}</h2>
               <div className="bg-blue-50 text-blue-800 p-4 rounded-xl text-sm mb-4">
-                Enter your total sales for the selected period. If you use our Dashboard, this can be synced automatically.
+                {t("wizard.step2Hint")}
               </div>
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1">Total Sales (BDT)</label>
+                  <label className="block text-sm font-medium text-slate-700 mb-1">{t("wizard.totalSales")}</label>
                   <input
                     type="number"
                     value={formData.totalSales}
@@ -109,7 +111,7 @@ export default function FormWizardPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1">Total Output VAT Collected (BDT)</label>
+                  <label className="block text-sm font-medium text-slate-700 mb-1">{t("wizard.totalOutputVat")}</label>
                   <input
                     type="number"
                     value={formData.totalVat}
@@ -126,7 +128,7 @@ export default function FormWizardPage() {
             <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4">
               <h2 className="text-xl font-semibold text-slate-900 flex items-center gap-2">
                 <DocumentTextIcon className="h-6 w-6 text-purple-600" />
-                Step 3: Review & Generate
+                {t("wizard.step3")}
               </h2>
               <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200">
                 <dl className="divide-y divide-slate-200">
@@ -155,7 +157,7 @@ export default function FormWizardPage() {
               <div className="text-center">
                 <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2 mx-auto">
                   <DocumentTextIcon className="h-5 w-5" />
-                  Generate Mushak 9.1 PDF
+                  {t("wizard.generatePdf")}
                 </button>
               </div>
             </div>
@@ -173,14 +175,14 @@ export default function FormWizardPage() {
                 : "bg-white text-slate-700 shadow-sm border border-slate-200 hover:bg-slate-50"
             }`}
           >
-            Back
+            {t("wizard.back")}
           </button>
           {step < 3 && (
             <button
               onClick={handleNext}
               className="px-6 py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-medium shadow-sm transition-colors"
             >
-              Continue
+              {t("wizard.continue")}
             </button>
           )}
         </div>

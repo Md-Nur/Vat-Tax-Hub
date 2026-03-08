@@ -1,29 +1,32 @@
 "use client";
 
-import Link from "next/link";
 import { DocumentTextIcon, CheckBadgeIcon, PencilSquareIcon } from "@heroicons/react/24/outline";
+import { useTranslation } from "@/lib/i18n";
+import Link from "next/link";
 
 export default function FormsPage() {
+  const { t } = useTranslation();
+
   const formsLinks = [
     {
-      title: "Mushak Wizard",
-      description: "Step-by-step guide to generating common NBR VAT forms.",
+      title: t("forms.mushakWizardTitle"),
+      description: t("forms.mushakWizardDesc"),
       icon: PencilSquareIcon,
       href: "/forms/wizard",
       color: "text-purple-600",
       bgLight: "bg-purple-50",
     },
     {
-      title: "Pre-filled Samples",
-      description: "View dummy samples of common tax forms. Edit and export to PDF.",
+      title: t("forms.samplesTitle"),
+      description: t("forms.samplesDesc"),
       icon: DocumentTextIcon,
       href: "/forms/samples",
       color: "text-blue-600",
       bgLight: "bg-blue-50",
     },
     {
-      title: "Compliance Checklist",
-      description: "Stay organized with monthly and annual compliance task lists.",
+      title: t("forms.checklistTitle"),
+      description: t("forms.checklistDesc"),
       icon: CheckBadgeIcon,
       href: "/compliance-checklist",
       color: "text-emerald-600",
@@ -36,10 +39,10 @@ export default function FormsPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h1 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900">
-            Form <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">&</span> Return Helpers
+            {t("forms.title")} <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">{t("forms.returnHelpers")}</span>
           </h1>
           <p className="text-lg text-slate-600">
-            Simplify your tax return process. Use our wizards or download pre-filled PDF samples.
+            {t("forms.subtitle")}
           </p>
         </div>
 
@@ -58,7 +61,7 @@ export default function FormsPage() {
                 {link.description}
               </p>
               <div className="flex items-center text-sm font-semibold text-purple-600 group-hover:text-indigo-600">
-                Explore tool 
+                {t("forms.explore")} 
                 <span className="ml-2 transform text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
               </div>
             </Link>
