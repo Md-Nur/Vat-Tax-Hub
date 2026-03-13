@@ -11,7 +11,8 @@
     "register": "Register",
     "logout": "Logout",
     "myAccount": "My Account",
-    "resources": "Resources"
+    "resources": "Resources",
+    "blog": "Blog"
   },
   "hero": {
     "title": "Free Tax & VAT Resources for Bangladesh",
@@ -267,5 +268,17 @@
     "generatePdf": "Generate Mushak 9.1 PDF",
     "back": "Back",
     "continue": "Continue"
+  },
+  "blog": {
+    "title": "Tax & VAT Blog",
+    "subtitle": "Expert insights on Bangladesh tax, VAT, and financial compliance — updated articles and guides.",
+    "allCategories": "All Categories",
+    "readMore": "Read More",
+    "backToBlogs": "Back to Blogs",
+    "views": "views",
+    "readOriginal": "Read Full Article on TaxVATPoint",
+    "relatedPosts": "Related Posts",
+    "noResults": "No blog posts found for this category.",
+    "published": "Published"
   }
 }

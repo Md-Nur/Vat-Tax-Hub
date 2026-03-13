@@ -52,6 +52,7 @@ export default function Navbar() {
               { href: "/", label: "nav.home" },
               { href: "/calculators", label: "nav.calculators" },
               { href: "/forms", label: "nav.forms" },
+              { href: "/blogs", label: "nav.blog" },
               { href: "/dashboard", label: "nav.dashboard" },
               { href: "/resources", label: "nav.resources" },
               { href: "/categories", label: "nav.categories" },
@@ -179,6 +180,13 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
             >
               {t("nav.forms")}
+            </Link>
+            <Link
+              href="/blogs"
+              className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 rounded-lg"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {t("nav.blog")}
             </Link>
             <Link
               href="/dashboard"
