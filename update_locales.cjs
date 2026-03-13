@@ -35,7 +35,7 @@ for (const [k, v] of Object.entries(dashKeys)) {
 
 // Home additions
 const homeKeys = {
-  "featuredCategoriesDesc": ["Browse our comprehensive collection of tax and VAT resources", "আমাদের কর এবং ভ্যাট সম্পদের বিশাল সংগ্রহ ব্রাউজ করুন"],
+  "featuredCategoriesDesc": ["Browse our comprehensive collection of tax and VAT resources", "আমাদের কর এবং ভ্যাট রিসোর্সের বিশাল সংগ্রহ ব্রাউজ করুন"],
   "noDocumentsAvail": ["No documents available yet.", "এখনো কোনো নথিপত্র উপলব্ধ নেই।"],
   "vatFormsDesc": ["75+ VAT related forms", "৭৫+ ভ্যাট সম্পর্কিত ফর্ম"],
   "incomeTaxActDesc": ["Complete tax legislation", "সম্পূর্ণ কর আইন"],

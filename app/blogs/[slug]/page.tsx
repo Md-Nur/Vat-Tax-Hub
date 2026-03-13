@@ -5,8 +5,6 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import { useTranslation } from "@/lib/i18n";
 import BlogCard from "@/components/BlogCard";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import {
   ArrowLeftIcon,
   EyeIcon,
@@ -75,50 +73,42 @@ export default function BlogDetailPage() {
 
   if (loading) {
     return (
-      <>
-        <Navbar />
-        <div className="min-h-screen bg-gray-50">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
-            <div className="animate-pulse space-y-6">
-              <div className="h-8 bg-slate-200 rounded-xl w-1/3" />
-              <div className="h-12 bg-slate-200 rounded-xl w-2/3" />
-              <div className="h-4 bg-slate-100 rounded w-1/4" />
-              <div className="space-y-3 mt-8">
-                {[...Array(8)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="h-4 bg-slate-100 rounded"
-                    style={{ width: `${85 + Math.random() * 15}%` }}
-                  />
-                ))}
-              </div>
+      <div className="min-h-screen bg-gray-50 pt-20">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
+          <div className="animate-pulse space-y-6">
+            <div className="h-8 bg-slate-200 rounded-xl w-1/3" />
+            <div className="h-12 bg-slate-200 rounded-xl w-2/3" />
+            <div className="h-4 bg-slate-100 rounded w-1/4" />
+            <div className="space-y-3 mt-8">
+              {[...Array(8)].map((_, i) => (
+                <div
+                  key={i}
+                  className="h-4 bg-slate-100 rounded"
+                  style={{ width: `${85 + Math.random() * 15}%` }}
+                />
+              ))}
             </div>
           </div>
         </div>
-        <Footer />
-      </>
+      </div>
     );
   }
 
   if (notFound || !blog) {
     return (
-      <>
-        <Navbar />
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-slate-900 mb-4">404</h1>
-            <p className="text-slate-500 mb-6">Blog post not found</p>
-            <Link
-              href="/blogs"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors"
-            >
-              <ArrowLeftIcon className="h-4 w-4" />
-              {t("blog.backToBlogs")}
-            </Link>
-          </div>
+      <div className="min-h-screen bg-gray-50 pt-20 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-slate-900 mb-4">404</h1>
+          <p className="text-slate-500 mb-6">Blog post not found</p>
+          <Link
+            href="/blogs"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors"
+          >
+            <ArrowLeftIcon className="h-4 w-4" />
+            {t("blog.backToBlogs")}
+          </Link>
         </div>
-        <Footer />
-      </>
+      </div>
     );
   }
 
@@ -132,18 +122,14 @@ export default function BlogDetailPage() {
       : blog.content || displayExcerpt;
 
   const categoryColors: Record<string, string> = {
-    "Income Tax Blog":
-      "bg-emerald-50 text-emerald-700 border-emerald-200",
+    "Income Tax Blog": "bg-emerald-50 text-emerald-700 border-emerald-200",
     "VAT Blog": "bg-blue-50 text-blue-700 border-blue-200",
     "TDS Rules": "bg-amber-50 text-amber-700 border-amber-200",
     "VDS Rules": "bg-purple-50 text-purple-700 border-purple-200",
-    "Income Tax Schedules":
-      "bg-rose-50 text-rose-700 border-rose-200",
+    "Income Tax Schedules": "bg-rose-50 text-rose-700 border-rose-200",
     "VAT Schedules": "bg-cyan-50 text-cyan-700 border-cyan-200",
-    "Income Tax Act 2023":
-      "bg-indigo-50 text-indigo-700 border-indigo-200",
-    "VAT & SD Act 2012":
-      "bg-teal-50 text-teal-700 border-teal-200",
+    "Income Tax Act 2023": "bg-indigo-50 text-indigo-700 border-indigo-200",
+    "VAT & SD Act 2012": "bg-teal-50 text-teal-700 border-teal-200",
   };
 
   const colorClass =
@@ -151,117 +137,100 @@ export default function BlogDetailPage() {
     "bg-slate-50 text-slate-700 border-slate-200";
 
   return (
-    <>
-      <Navbar />
-      <div className="min-h-screen bg-gray-50">
-        {/* Article Header */}
-        <section className="relative overflow-hidden bg-slate-950 text-white">
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div
-              className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-blue-600/20 blur-[100px] animate-pulse"
-              style={{ animationDuration: "4s" }}
-            />
-            <div
-              className="absolute top-20 -left-20 w-72 h-72 rounded-full bg-indigo-600/15 blur-[80px] animate-pulse"
-              style={{ animationDuration: "6s" }}
-            />
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
-          </div>
-
-          <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-            <Link
-              href="/blogs"
-              className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors mb-8"
-            >
-              <ArrowLeftIcon className="h-4 w-4" />
-              {t("blog.backToBlogs")}
-            </Link>
-
-            <div className="mb-4">
-              <span
-                className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border ${colorClass}`}
-              >
-                <TagIcon className="h-3 w-3" />
-                {blog.category}
-              </span>
-            </div>
-
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
-              {displayTitle}
-            </h1>
-
-            <div className="flex flex-wrap items-center gap-4 mt-6 text-sm text-slate-400">
-              <span className="flex items-center gap-1.5">
-                <CalendarDaysIcon className="h-4 w-4" />
-                {t("blog.published")}:{" "}
-                {new Date(blog.createdAt).toLocaleDateString(
-                  locale === "bn" ? "bn-BD" : "en-US",
-                  {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  }
-                )}
-              </span>
-              <span className="flex items-center gap-1.5">
-                <EyeIcon className="h-4 w-4" />
-                {blog.views.toLocaleString()} {t("blog.views")}
-              </span>
-            </div>
-          </div>
-        </section>
-
-        {/* Article Content */}
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 -mt-8 relative z-10">
-          <article className="bg-white rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100 p-8 sm:p-12">
-            {/* Excerpt as lead paragraph */}
-            {displayExcerpt && (
-              <p className="text-lg text-slate-600 leading-relaxed mb-8 pb-8 border-b border-slate-100 font-medium">
-                {displayExcerpt}
-              </p>
-            )}
-
-            {/* Content */}
-            {displayContent && displayContent !== displayExcerpt && (
-              <div className="prose prose-slate prose-lg max-w-none">
-                <p className="text-slate-700 leading-relaxed whitespace-pre-line">
-                  {displayContent}
-                </p>
-              </div>
-            )}
-
-            {/* Source link */}
-            {blog.sourceUrl && (
-              <div className="mt-10 pt-8 border-t border-slate-100">
-                <a
-                  href={blog.sourceUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl hover:from-blue-700 hover:to-indigo-700 shadow-sm shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all duration-300 font-medium text-sm"
-                >
-                  <ArrowTopRightOnSquareIcon className="h-4 w-4" />
-                  {t("blog.readOriginal")}
-                </a>
-              </div>
-            )}
-          </article>
+    <div className="min-h-screen bg-gray-50 pt-20">
+      {/* Article Header */}
+      <section className="relative overflow-hidden bg-slate-950 text-white">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div
+            className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-blue-600/20 blur-[100px] animate-pulse"
+            style={{ animationDuration: "4s" }}
+          />
+          <div
+            className="absolute top-20 -left-20 w-72 h-72 rounded-full bg-indigo-600/15 blur-[80px] animate-pulse"
+            style={{ animationDuration: "6s" }}
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
         </div>
 
-        {/* Related Posts */}
-        {relatedPosts.length > 0 && (
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8">
-              {t("blog.relatedPosts")}
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {relatedPosts.map((post) => (
-                <BlogCard key={post.id} {...post} />
-              ))}
-            </div>
+        <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+          <Link
+            href="/blogs"
+            className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors mb-8"
+          >
+            <ArrowLeftIcon className="h-4 w-4" />
+            {t("blog.backToBlogs")}
+          </Link>
+
+          <div className="mb-4">
+            <span
+              className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border ${colorClass}`}
+            >
+              <TagIcon className="h-3 w-3" />
+              {blog.category}
+            </span>
           </div>
-        )}
+
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
+            {displayTitle}
+          </h1>
+
+          <div className="flex flex-wrap items-center gap-4 mt-6 text-sm text-slate-400">
+            <span className="flex items-center gap-1.5">
+              <CalendarDaysIcon className="h-4 w-4" />
+              {t("blog.published")}:{" "}
+              {new Date(blog.createdAt).toLocaleDateString(
+                locale === "bn" ? "bn-BD" : "en-US",
+                {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                }
+              )}
+            </span>
+            <span className="flex items-center gap-1.5">
+              <EyeIcon className="h-4 w-4" />
+              {blog.views.toLocaleString()} {t("blog.views")}
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* Article Content */}
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 -mt-8 relative z-10">
+        <article className="bg-white rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100 p-8 sm:p-12">
+          {/* Excerpt as lead paragraph */}
+          {displayExcerpt && (
+            <p className="text-lg text-slate-600 leading-relaxed mb-8 pb-8 border-b border-slate-100 font-medium">
+              {displayExcerpt}
+            </p>
+          )}
+
+          {/* Content */}
+          {displayContent && (
+            <div className="prose prose-slate prose-lg max-w-none">
+              <div
+                className="text-slate-700 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: displayContent }}
+              />
+            </div>
+          )}
+
+        </article>
       </div>
-      <Footer />
-    </>
+
+      {/* Related Posts */}
+      {relatedPosts.length > 0 && (
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8">
+            {t("blog.relatedPosts")}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {relatedPosts.map((post) => (
+              <BlogCard key={post.id} {...post} />
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
   );
 }

@@ -23,49 +23,49 @@ model User {
 }
 
 model Category {
-  id          String     @id @default(cuid())
-  name        String
-  nameBn      String     @default("")
-  slug        String     @unique
-  description String?
+  id            String     @id @default(cuid())
+  name          String
+  nameBn        String     @default("")
+  slug          String     @unique
+  description   String?
   descriptionBn String?
-  icon        String     @default("folder")
-  documents   Document[]
-  createdAt   DateTime   @default(now())
-  updatedAt   DateTime   @updatedAt
+  icon          String     @default("folder")
+  documents     Document[]
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
 }
 
 model Document {
-  id          String   @id @default(cuid())
-  title       String
-  titleBn     String   @default("")
-  description String?
+  id            String   @id @default(cuid())
+  title         String
+  titleBn       String   @default("")
+  description   String?
   descriptionBn String?
-  categoryId  String
-  category    Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
-  fileUrl     String
-  fileType    String   // "pdf", "excel", "word"
-  language    String   @default("en")
-  views       Int      @default(0)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  categoryId    String
+  category      Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  fileUrl       String
+  fileType      String // "pdf", "excel", "word"
+  language      String   @default("en")
+  views         Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
 
   @@index([categoryId])
 }
 
 model BlogPost {
-  id          String   @id @default(cuid())
-  title       String
-  titleBn     String   @default("")
-  slug        String   @unique
-  excerpt     String?
-  excerptBn   String?
-  content     String?
-  contentBn   String?
-  category    String   @default("Income Tax Blog")
-  sourceUrl   String?
-  views       Int      @default(0)
-  published   Boolean  @default(true)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id        String   @id @default(cuid())
+  title     String
+  titleBn   String   @default("")
+  slug      String   @unique
+  excerpt   String?
+  excerptBn String?
+  content   String?
+  contentBn String?
+  category  String   @default("Income Tax Blog")
+  sourceUrl String?
+  views     Int      @default(0)
+  published Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
